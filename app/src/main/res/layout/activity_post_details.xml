@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/sunflower_yellow"
+    tools:context=".PostDetailsActivity">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView2"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/authorNametxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Author Name"
+            android:textColor="@color/light_white"
+            android:textSize="16sp"
+            app:layout_constraintStart_toEndOf="@+id/circleImageView2"
+            app:layout_constraintTop_toTopOf="@+id/circleImageView2" />
+
+        <TextView
+            android:id="@+id/authorjobtxt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Author Job"
+            android:textColor="@color/light_white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toTopOf="@+id/timeagotxt"
+            app:layout_constraintEnd_toEndOf="@+id/authorNametxt"
+            app:layout_constraintStart_toStartOf="@+id/authorNametxt"
+            app:layout_constraintTop_toBottomOf="@+id/authorNametxt" />
+
+        <TextView
+            android:id="@+id/timeagotxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Time ago"
+            android:textColor="@color/light_white"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/circleImageView2"
+            app:layout_constraintEnd_toEndOf="@+id/authorjobtxt"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="@+id/authorjobtxt"
+            app:layout_constraintTop_toBottomOf="@+id/authorNametxt"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/surveyCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Survey Catagory"
+            android:textColor="@color/light_white"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timeagotxt" />
+
+        <TextView
+            android:id="@+id/surveyTitletxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Survey Title"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surveyCategory" />
+
+        <ScrollView
+            android:id="@+id/scrollView2"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/surveyTitletxt">
+
+            <TextView
+                android:id="@+id/surveyDetailsTxt"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:scrollbars="vertical"
+                android:text="Hello"
+
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/surveyTitletxt"
+                app:layout_constraintTop_toBottomOf="@+id/surveyTitletxt" />
+
+        </ScrollView>
+
+        <ImageView
+            android:id="@+id/surveyImageDetails"
+            android:layout_width="0dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="8dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="@+id/scrollView2"
+            app:layout_constraintStart_toStartOf="@+id/scrollView2"
+            app:layout_constraintTop_toBottomOf="@+id/scrollView2"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/surveyOpinionsList"
+            android:layout_width="409dp"
+            android:layout_height="271dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/surveyImageDetails"
+            app:layout_constraintStart_toStartOf="@+id/surveyImageDetails"
+            app:layout_constraintTop_toBottomOf="@+id/analysisBtn" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Oppinions"
+            android:textAlignment="center"
+            android:textColor="@color/light_white"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="@+id/analysisBtn"
+            app:layout_constraintStart_toStartOf="@+id/surveyImageDetails"
+            app:layout_constraintTop_toTopOf="@+id/analysisBtn" />
+
+        <Button
+            android:id="@+id/analysisBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/gold_btn"
+            android:text="Analysis"
+            android:textColor="@color/light_white"
+            app:layout_constraintStart_toEndOf="@+id/textView12"
+            app:layout_constraintTop_toBottomOf="@+id/surveyImageDetails" />
+
+        <Button
+            android:id="@+id/feedbackBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:backgroundTint="@color/gold_btn"
+            android:text="FeedBack"
+            app:layout_constraintBottom_toBottomOf="@+id/analysisBtn"
+            app:layout_constraintStart_toEndOf="@+id/analysisBtn"
+            app:layout_constraintTop_toTopOf="@+id/analysisBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

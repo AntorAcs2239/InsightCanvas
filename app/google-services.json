@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "585474951039",
+    "project_id": "insightcanvas-7c099",
+    "storage_bucket": "insightcanvas-7c099.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585474951039:android:b6221fa960e656ca223c4a",
+        "android_client_info": {
+          "package_name": "com.example.insightcanvas"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0PP1Tw8ZZE5kZNETeNZl-OdXFUeJv5bQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
